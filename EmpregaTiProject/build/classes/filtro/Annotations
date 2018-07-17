@@ -1,0 +1,36 @@
+package filtro;
+
+import java.io.IOException;
+
+import javax.servlet.Filter;
+import javax.servlet.FilterChain;
+import javax.servlet.FilterConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.annotation.WebFilter;
+import javax.servlet.http.HttpServletRespons;
+
+@WebFilter("/*")
+public class CorsFilter implements Filter{
+
+	public CorsFilter() {
+	}
+	public void destroy() {
+	}
+
+	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
+		HttpServletResponse resp = (HttpServletResponse) response;
+		resp.addHeader("Access-Control-Allow-Origin", "*");
+		resp.addHeader("Access-Control-Allow-Method", "POST,GET");
+		resp.addHeader("Access-Control-Allow-Headers", "Content-Type");
+		resp.addHeader("Allow", "POST,OPTIONS");
+		chain.doFilter(request, response);
+	}
+
+	public void init(FilterConfig fConfig) throws ServletException {		
+	}
+	
+	
+
+}

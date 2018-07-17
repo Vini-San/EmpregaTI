@@ -1,0 +1,31 @@
+GET
+
+Gravar
+http://localhost:12565/EmpregaTiProject/json/login/create/fernando@gmail.com/123/fernando/1
+
+Ler tudo:
+http://localhost:12565/EmpregaTiProject/json/login/listartudo
+
+Ler tudo em algumas colunas:
+http://localhost:12565/EmpregaTiProject/json/login/listarcomum
+
+Buscar por email:
+http://localhost:12565/EmpregaTiProject/json/login/buscaremail/vinicius@gmail.com
+
+Buscar por tipo:
+http://localhost:12565/EmpregaTiProject/json/login/buscartipo/2
+
+Logar com restrição de até três tentativas:
+	http://localhost:12565/EmpregaTiProject/json/login/logar/vinicius@gmail.com/123
+
+Validar com restrição de até vinte tentativas:
+http://localhost:12565/EmpregaTiProject/json/login/validar/vinicius@gmail.com/123
+
+Excluir pelo id:
+http://localhost:12565/EmpregaTiProject/json/login/excluir/6
+
+Modificar tudo:
+http://localhost:12565/EmpregaTiProject/json/login/update/4/vinicius@hotmail.com/456/Vinicius/2
+
+Modificar somente a senha pelo id:
+http://localhost:12565/EmpregaTiProject/json/login/updatesenha/4/123
